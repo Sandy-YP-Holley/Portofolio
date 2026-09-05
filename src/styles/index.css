@@ -1,0 +1,76 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --color-nest: #E0234E;
+    --color-dark-bg: #07080B;
+  }
+
+  html {
+    color-scheme: dark;
+    scroll-behavior: smooth;
+  }
+
+  body {
+    background-color: #07080B;
+    color: #F1F5F9;
+    font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  :focus-visible {
+    outline: 2px solid #E0234E;
+    outline-offset: 3px;
+    border-radius: 8px;
+  }
+
+  /* Custom subtle dark scrollbar */
+  ::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+  }
+  ::-webkit-scrollbar-track {
+    background: #0C0E14;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: #1E2331;
+    border-radius: 9999px;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: #E0234E;
+  }
+}
+
+/* NestJS-style Radial Glow and Mesh */
+.bg-nest-glow {
+  background: radial-gradient(circle at 50% 30%, rgba(224, 35, 78, 0.15) 0%, rgba(120, 15, 32, 0.05) 45%, transparent 70%);
+}
+
+.bg-nest-card-hover {
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.bg-nest-card-hover:hover {
+  border-color: rgba(224, 35, 78, 0.4);
+  box-shadow: 0 0 30px -10px rgba(224, 35, 78, 0.25);
+}
+
+/* Subtle dot grid */
+.bg-grid-pattern {
+  background-size: 32px 32px;
+  background-image: radial-gradient(rgba(255, 255, 255, 0.06) 1px, transparent 1px);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  ::before,
+  ::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
