@@ -11,7 +11,7 @@ import { Footer } from './components/common/Footer';
 
 export const App: React.FC = () => {
   return (
-    <div className="min-h-screen bg-dark-950 text-slate-100 flex flex-col font-sans selection:bg-nest-500/30 selection:text-white">
+    <div className="min-h-screen bg-dark-950 text-slate-100 flex flex-col font-sans selection:bg-nest-500/30 selection:text-white overflow-x-hidden">
       {/* Floating Pill Navbar (NestJS Style) */}
       <Navbar />
 

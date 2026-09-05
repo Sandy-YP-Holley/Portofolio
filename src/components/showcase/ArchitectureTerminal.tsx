@@ -107,63 +107,73 @@ const benchmarkResults = {
         className="rounded-2xl border border-white/10 bg-dark-900 shadow-2xl overflow-hidden backdrop-blur-xl"
       >
         {/* Terminal Header */}
-        <div className="flex flex-wrap items-center justify-between px-4 sm:px-6 py-3 border-b border-white/10 bg-dark-950 gap-3">
-          <div className="flex items-center gap-2">
-            <div className="w-3 h-3 rounded-full bg-red-500/80"></div>
-            <div className="w-3 h-3 rounded-full bg-yellow-500/80"></div>
-            <div className="w-3 h-3 rounded-full bg-green-500/80"></div>
-            <span className="ml-2 font-mono text-xs text-slate-300 hidden sm:inline">
-              ~/sandy-holley/architecture-spec.ts
-            </span>
+        <div className="flex flex-col sm:flex-row sm:items-center justify-between px-4 sm:px-6 py-3 border-b border-white/10 bg-dark-950 gap-3">
+          <div className="flex items-center justify-between sm:justify-start w-full sm:w-auto gap-2">
+            <div className="flex items-center gap-2">
+              <div className="w-3 h-3 rounded-full bg-red-500/80"></div>
+              <div className="w-3 h-3 rounded-full bg-yellow-500/80"></div>
+              <div className="w-3 h-3 rounded-full bg-green-500/80"></div>
+              <span className="ml-2 font-mono text-xs text-slate-300 hidden sm:inline">
+                ~/sandy-holley/architecture-spec.ts
+              </span>
+            </div>
+            <button
+              onClick={copyCode}
+              type="button"
+              className="sm:hidden p-1.5 text-slate-300 hover:text-white rounded-lg hover:bg-white/10 border border-white/10"
+              aria-label="Copy snippet"
+            >
+              {copied ? <Check className="w-3.5 h-3.5 text-emerald-400" /> : <Copy className="w-3.5 h-3.5" />}
+            </button>
           </div>
 
           {/* Tabs */}
-          <div className="flex flex-wrap items-center gap-1.5 font-mono text-xs">
+          <div className="flex items-center gap-1.5 font-mono text-xs overflow-x-auto pb-1 sm:pb-0 scrollbar-none w-full sm:w-auto">
             <button
               onClick={() => setActiveTab('cache')}
-              className={`px-3 py-1.5 rounded-lg transition-colors flex items-center gap-1.5 ${
+              className={`px-3 py-1.5 rounded-lg transition-colors flex items-center gap-1.5 whitespace-nowrap flex-shrink-0 ${
                 activeTab === 'cache'
                   ? 'bg-nest-500 text-white font-semibold'
                   : 'text-slate-300 hover:text-white hover:bg-white/5'
               }`}
             >
-              <Cpu className="w-3.5 h-3.5" />
+              <Cpu className="w-3.5 h-3.5 flex-shrink-0" />
               <span>Connection Pooling</span>
             </button>
 
             <button
               onClick={() => setActiveTab('rbac')}
-              className={`px-3 py-1.5 rounded-lg transition-colors flex items-center gap-1.5 ${
+              className={`px-3 py-1.5 rounded-lg transition-colors flex items-center gap-1.5 whitespace-nowrap flex-shrink-0 ${
                 activeTab === 'rbac'
                   ? 'bg-nest-500 text-white font-semibold'
                   : 'text-slate-300 hover:text-white hover:bg-white/5'
               }`}
             >
-              <Shield className="w-3.5 h-3.5" />
+              <Shield className="w-3.5 h-3.5 flex-shrink-0" />
               <span>Anti-BOLA Guard</span>
             </button>
 
             <button
               onClick={() => setActiveTab('tests')}
-              className={`px-3 py-1.5 rounded-lg transition-colors flex items-center gap-1.5 ${
+              className={`px-3 py-1.5 rounded-lg transition-colors flex items-center gap-1.5 whitespace-nowrap flex-shrink-0 ${
                 activeTab === 'tests'
                   ? 'bg-emerald-500 text-white font-semibold'
                   : 'text-slate-300 hover:text-white hover:bg-white/5'
               }`}
             >
-              <CheckCircle2 className="w-3.5 h-3.5" />
+              <CheckCircle2 className="w-3.5 h-3.5 flex-shrink-0" />
               <span>172 Tests Matrix</span>
             </button>
 
             <button
               onClick={() => setActiveTab('vision')}
-              className={`px-3 py-1.5 rounded-lg transition-colors flex items-center gap-1.5 ${
+              className={`px-3 py-1.5 rounded-lg transition-colors flex items-center gap-1.5 whitespace-nowrap flex-shrink-0 ${
                 activeTab === 'vision'
                   ? 'bg-nest-500 text-white font-semibold'
                   : 'text-slate-300 hover:text-white hover:bg-white/5'
               }`}
             >
-              <Terminal className="w-3.5 h-3.5" />
+              <Terminal className="w-3.5 h-3.5 flex-shrink-0" />
               <span>YOLO Benchmark</span>
             </button>
           </div>
@@ -171,7 +181,7 @@ const benchmarkResults = {
           <button
             onClick={copyCode}
             type="button"
-            className="p-1.5 text-slate-300 hover:text-white rounded-lg hover:bg-white/10 border border-white/10"
+            className="hidden sm:inline-flex p-1.5 text-slate-300 hover:text-white rounded-lg hover:bg-white/10 border border-white/10"
             aria-label="Copy snippet"
           >
             {copied ? <Check className="w-3.5 h-3.5 text-emerald-400" /> : <Copy className="w-3.5 h-3.5" />}

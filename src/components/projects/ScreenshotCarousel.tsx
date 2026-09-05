@@ -64,7 +64,7 @@ export const ScreenshotCarousel: React.FC<ScreenshotCarouselProps> = ({
       <div className="flex items-center justify-between pb-3 mb-3 border-b border-white/10 font-mono text-xs text-slate-400">
         <div className="flex items-center gap-2">
           <span className="w-2 h-2 rounded-full bg-nest-500"></span>
-          <span className="text-white font-semibold text-xs truncate max-w-[200px] sm:max-w-none">
+          <span className="text-white font-semibold text-xs truncate max-w-[130px] sm:max-w-none">
             {current.title}
           </span>
           {current.category && (
@@ -91,7 +91,7 @@ export const ScreenshotCarousel: React.FC<ScreenshotCarouselProps> = ({
 
       {/* Main Image Stage */}
       <div
-        className="relative aspect-[16/10] sm:aspect-[16/9] w-full rounded-xl bg-black/60 overflow-hidden flex items-center justify-center group cursor-pointer border border-white/5"
+        className="relative aspect-[4/3] sm:aspect-[16/9] w-full rounded-xl bg-black/60 overflow-hidden flex items-center justify-center group cursor-pointer border border-white/5"
         onClick={() => setLightboxOpen(true)}
         onTouchStart={handleTouchStart}
         onTouchEnd={handleTouchEnd}

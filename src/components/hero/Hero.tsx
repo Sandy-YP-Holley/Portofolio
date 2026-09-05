@@ -33,7 +33,7 @@ export const Hero: React.FC = () => {
             className="flex items-center justify-center gap-2 px-4 py-1.5 rounded-full bg-white/5 border border-white/10 text-slate-300 text-xs font-mono backdrop-blur-md mx-auto"
           >
             <span className="w-1.5 h-1.5 rounded-full bg-nest-500 flex-shrink-0" />
-            <span className="text-center">Full-Stack Developer · MERN · PERN · TALL · Python</span>
+            <span className="text-center text-[11px] sm:text-xs">Full-Stack Developer · MERN · PERN · TALL · Python</span>
             <span className="w-1.5 h-1.5 rounded-full opacity-0 flex-shrink-0" aria-hidden="true" />
           </motion.div>
         </div>
@@ -117,19 +117,19 @@ export const Hero: React.FC = () => {
           initial={{ opacity: 0, y: 15 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.5 }}
-          className="grid grid-cols-3 gap-3 sm:gap-6 w-full max-w-xl pt-6 border-t border-white/10 font-mono text-center"
+          className="grid grid-cols-3 gap-2 sm:gap-6 w-full max-w-xl pt-6 border-t border-white/10 font-mono text-center"
         >
           <div>
-            <span className="text-xl sm:text-2xl font-bold text-white block">172 / 172</span>
-            <span className="text-xs text-slate-400">Tests Passing (CI)</span>
+            <span className="text-lg sm:text-2xl font-bold text-white block">172 / 172</span>
+            <span className="text-[10px] sm:text-xs text-slate-400">Tests Passing (CI)</span>
           </div>
           <div>
-            <span className="text-xl sm:text-2xl font-bold text-white block">1 Year</span>
-            <span className="text-xs text-slate-400">Hands-on Experience</span>
+            <span className="text-lg sm:text-2xl font-bold text-white block">1 Year</span>
+            <span className="text-[10px] sm:text-xs text-slate-400">Hands-on Experience</span>
           </div>
           <div>
-            <span className="text-xl sm:text-2xl font-bold text-white block">4 Repos</span>
-            <span className="text-xs text-slate-400">Full-Stack & Vision</span>
+            <span className="text-lg sm:text-2xl font-bold text-white block">4 Repos</span>
+            <span className="text-[10px] sm:text-xs text-slate-400">Full-Stack & Vision</span>
           </div>
         </motion.div>
 

@@ -40,28 +40,28 @@ export const ResearchBenchmark: React.FC<ResearchBenchmarkProps> = ({ findings }
         </div>
 
         {/* Dataset selector pills */}
-        <div className="flex items-center bg-dark-900 border border-white/10 rounded-full p-1 self-start sm:self-auto font-mono text-xs">
+        <div className="flex items-center bg-dark-900 border border-white/10 rounded-full p-1 self-start sm:self-auto font-mono text-[11px] sm:text-xs">
           <button
             type="button"
             onClick={() => setSelectedDataset('963 Images')}
-            className={`px-3 py-1 rounded-full transition-colors ${
+            className={`px-2.5 sm:px-3 py-1 rounded-full transition-colors whitespace-nowrap ${
               selectedDataset === '963 Images'
                 ? 'bg-nest-500 text-white font-bold shadow-md shadow-nest-500/30'
                 : 'text-slate-400 hover:text-white'
             }`}
           >
-            963 Images (Expanded)
+            963 Images<span className="hidden sm:inline"> (Expanded)</span>
           </button>
           <button
             type="button"
             onClick={() => setSelectedDataset('200 Images')}
-            className={`px-3 py-1 rounded-full transition-colors ${
+            className={`px-2.5 sm:px-3 py-1 rounded-full transition-colors whitespace-nowrap ${
               selectedDataset === '200 Images'
                 ? 'bg-nest-500 text-white font-bold shadow-md shadow-nest-500/30'
                 : 'text-slate-400 hover:text-white'
             }`}
           >
-            200 Images (Baseline)
+            200 Images<span className="hidden sm:inline"> (Baseline)</span>
           </button>
         </div>
       </div>

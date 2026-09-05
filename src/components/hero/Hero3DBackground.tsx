@@ -16,7 +16,7 @@ export const Hero3DBackground: React.FC = () => {
       0.1,
       100
     );
-    camera.position.z = 7;
+    camera.position.z = window.innerWidth < 640 ? 8.5 : 7;
 
     const renderer = new THREE.WebGLRenderer({
       canvas,
@@ -150,6 +150,7 @@ export const Hero3DBackground: React.FC = () => {
       const w = window.innerWidth;
       const h = window.innerHeight || 800;
       camera.aspect = w / h;
+      camera.position.z = w < 640 ? 8.5 : 7;
       camera.updateProjectionMatrix();
       renderer.setSize(w, h);
     };

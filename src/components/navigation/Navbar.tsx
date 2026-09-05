@@ -145,33 +145,40 @@ export const Navbar: React.FC = () => {
         </div>
       </div>
 
-      {/* Mobile Drawer */}
+      {/* Mobile Backdrop & Drawer */}
       {mobileMenuOpen && (
-        <div className="fixed inset-x-4 top-20 z-50 md:hidden bg-dark-900/95 backdrop-blur-2xl border border-white/15 rounded-3xl p-6 shadow-2xl pointer-events-auto animate-in fade-in duration-200">
-          <div className="flex flex-col gap-2">
-            {navItems.map((item) => (
-              <button
-                key={item.id}
-                onClick={() => scrollToSection(item.id)}
-                className="w-full text-left py-2.5 px-4 rounded-xl text-slate-200 hover:bg-white/10 hover:text-nest-400 transition-colors font-medium text-sm"
-              >
-                {item.label}
-              </button>
-            ))}
-            <div className="pt-4 border-t border-white/10 flex items-center justify-between">
-              <span className="text-xs text-slate-400 font-mono">Kota Bekasi, ID (UTC+7)</span>
-              <a
-                href="https://github.com/Sandy-YP-Holley"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-xs text-nest-400 font-mono flex items-center gap-1"
-              >
-                <span>GitHub</span>
-                <ArrowUpRight className="w-3 h-3" />
-              </a>
+        <>
+          <div
+            className="fixed inset-0 bg-black/60 backdrop-blur-sm z-40 md:hidden pointer-events-auto"
+            onClick={() => setMobileMenuOpen(false)}
+            aria-hidden="true"
+          />
+          <div className="fixed inset-x-4 top-20 z-50 md:hidden bg-dark-900/95 backdrop-blur-2xl border border-white/15 rounded-3xl p-6 shadow-2xl pointer-events-auto animate-in fade-in duration-200">
+            <div className="flex flex-col gap-2">
+              {navItems.map((item) => (
+                <button
+                  key={item.id}
+                  onClick={() => scrollToSection(item.id)}
+                  className="w-full text-left py-2.5 px-4 rounded-xl text-slate-200 hover:bg-white/10 hover:text-nest-400 transition-colors font-medium text-sm"
+                >
+                  {item.label}
+                </button>
+              ))}
+              <div className="pt-4 border-t border-white/10 flex items-center justify-between">
+                <span className="text-xs text-slate-400 font-mono">Kota Bekasi, ID (UTC+7)</span>
+                <a
+                  href="https://github.com/Sandy-YP-Holley"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-xs text-nest-400 font-mono flex items-center gap-1"
+                >
+                  <span>GitHub</span>
+                  <ArrowUpRight className="w-3 h-3" />
+                </a>
+              </div>
             </div>
           </div>
-        </div>
+        </>
       )}
     </header>
   );

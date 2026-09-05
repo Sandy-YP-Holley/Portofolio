@@ -23,7 +23,7 @@ export const ContactSection: React.FC = () => {
         whileInView={{ opacity: 1, y: 0, scale: 1 }}
         viewport={{ once: true }}
         transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
-        className="relative rounded-3xl p-8 sm:p-12 md:p-14 bg-gradient-to-br from-dark-900 via-nest-950/60 to-dark-950 border border-nest-500/30 shadow-2xl overflow-hidden text-center flex flex-col items-center"
+        className="relative rounded-3xl p-6 sm:p-12 md:p-14 bg-gradient-to-br from-dark-900 via-nest-950/60 to-dark-950 border border-nest-500/30 shadow-2xl overflow-hidden text-center flex flex-col items-center"
       >
         {/* Ambient Glow */}
         <div className="absolute -top-24 left-1/2 -translate-x-1/2 w-96 h-96 bg-nest-500/15 rounded-full blur-3xl pointer-events-none" />
@@ -48,14 +48,14 @@ export const ContactSection: React.FC = () => {
               type="button"
               onClick={copyEmail}
               title="Click to copy email"
-              className="flex items-center gap-2 px-4 py-2.5 rounded-full bg-dark-950 border border-white/15 font-mono text-xs sm:text-sm text-white hover:border-nest-500/50 transition-colors group cursor-pointer"
+              className="flex items-center justify-center gap-2 px-3 sm:px-4 py-2.5 rounded-full bg-dark-950 border border-white/15 font-mono text-[11px] sm:text-sm text-white hover:border-nest-500/50 transition-colors group cursor-pointer max-w-full"
             >
-              <Mail className="w-4 h-4 text-nest-400" />
-              <span>{email}</span>
+              <Mail className="w-4 h-4 text-nest-400 flex-shrink-0" />
+              <span className="truncate">{email}</span>
               {copied ? (
-                <Check className="w-3.5 h-3.5 text-emerald-400" />
+                <Check className="w-3.5 h-3.5 text-emerald-400 flex-shrink-0" />
               ) : (
-                <Copy className="w-3 h-3 text-slate-500 group-hover:text-slate-300 transition-colors" />
+                <Copy className="w-3.5 h-3.5 text-slate-500 group-hover:text-slate-300 transition-colors flex-shrink-0" />
               )}
             </button>
 
@@ -94,7 +94,7 @@ export const ContactSection: React.FC = () => {
           </div>
 
           {/* Social Links */}
-          <div className="flex flex-wrap items-center justify-center gap-4 pt-4 border-t border-white/10 text-xs font-mono text-slate-300">
+          <div className="flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-4 pt-4 border-t border-white/10 text-xs font-mono text-slate-300">
             <a
               href="https://github.com/Sandy-YP-Holley"
               target="_blank"
@@ -105,7 +105,7 @@ export const ContactSection: React.FC = () => {
               <span>github.com/Sandy-YP-Holley</span>
             </a>
 
-            <span>•</span>
+            <span className="hidden sm:inline">•</span>
 
             <a
               href="https://linkedin.com/in/sandyypholley"
@@ -119,7 +119,7 @@ export const ContactSection: React.FC = () => {
 
             <span className="hidden sm:inline">•</span>
 
-            <span className="flex items-center gap-1 text-slate-400 hidden sm:inline-flex">
+            <span className="flex items-center gap-1 text-slate-400">
               <MapPin className="w-3.5 h-3.5 text-nest-400" />
               <span>Kota Bekasi, ID</span>
             </span>
