@@ -14,7 +14,7 @@
   Designed with an engineering-first aesthetic inspired by the <a href="https://nestjs.com/">NestJS</a> design system: dark mode palette, signature crimson highlights (<samp>#E0234E</samp>), modular case studies, and real-time 3D visual computing.
 </p>
 
-[**View Live Demo**](http://127.0.0.1:5173/) · [**GitHub Profile**](https://github.com/Sandy-YP-Holley) · [**LinkedIn**](https://linkedin.com/in/sandyypholley) · [**Contact**](mailto:holleysandyyogaprakasa@gmail.com)
+[**View Live Demo**](https://portofolio-zeta-blush-22.vercel.app/) · [**GitHub Profile**](https://github.com/Sandy-YP-Holley) · [**LinkedIn**](https://linkedin.com/in/sandyypholley) · [**Contact**](mailto:holleysandyyogaprakasa@gmail.com)
 
 </div>
 
