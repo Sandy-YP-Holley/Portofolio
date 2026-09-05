@@ -8,7 +8,6 @@
 [![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-3.4-38B2AC?style=flat-square&logo=tailwind-css&logoColor=white)](https://tailwindcss.com/)
 [![Three.js](https://img.shields.io/badge/Three.js-0.180-black?style=flat-square&logo=three.js&logoColor=white)](https://threejs.org/)
 [![Framer Motion](https://img.shields.io/badge/Framer_Motion-12.4-0055FF?style=flat-square&logo=framer&logoColor=white)](https://www.framer.com/motion/)
-[![CI Verification](https://img.shields.io/badge/CI_Tests-172%2F172_Passing-10B981?style=flat-square&logo=githubactions&logoColor=white)](https://github.com/Sandy-YP-Holley)
 
 <p align="center">
   <b>Personal developer portfolio, interactive project archive, and architectural showcase for Sandy Yoga Prakasa Holley.</b><br />
